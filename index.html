@@ -705,6 +705,17 @@
             flex-wrap: wrap;
         }
         .q-foot p { color: #a9bccd; font-size: 0.9375rem; }
+        .q-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.4rem;
+        }
+        .q-cta small {
+            font-size: 0.6875rem;
+            color: #8f969e;
+            letter-spacing: 0.02em;
+        }
 
         /* ---------- Themes ---------- */
         .themes {
@@ -933,6 +944,7 @@
             .biz-card { position: relative; left: 0; bottom: 0; width: 100%; margin-top: 1rem; }
             .cta { padding: 2.75rem 1.25rem; }
             .contact-row { flex-direction: column; align-items: center; gap: 0.7rem; }
+            .q-cta { align-items: center; width: 100%; }
             .foot-grid { flex-direction: column; }
             .foot-meta { justify-content: center; text-align: center; }
         }
@@ -1178,7 +1190,13 @@
                     </div>
                     <div class="q-foot">
                         <p>Отговаряте веднъж. Ние не губим време с догадки.</p>
-                        <a href="#contact" class="btn btn-white">Получете въпросника</a>
+                        <div class="q-cta">
+                            <a href="assets/pagefive-vaprosnik.docx" download="PageFive-Въпросник.docx" class="btn btn-white">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                Получете въпросника
+                            </a>
+                            <small>Word документ · редактируем</small>
+                        </div>
                     </div>
                 </div>
             </div>

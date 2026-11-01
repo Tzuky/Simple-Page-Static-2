@@ -54,7 +54,6 @@ GitHub Pages (one account per client).
 Replace the placeholders:
 
 - `hello@pagefive.net` → real email (appears in CTA, footer JSON-LD)
-- `+359 888 000 000` → real phone (CTA, hero mockup, JSON-LD)
 - `vashiyat-biznes.bg` → example domain shown in the mockup (cosmetic)
 
 Prices, delivery time and package contents are set in the copy — adjust as needed.

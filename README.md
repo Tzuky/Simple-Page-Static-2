@@ -1,4 +1,6 @@
-# УебКарта — business card websites for small businesses
+# PageFive — business card websites for small businesses
+
+**Пет дизайна. Един сайт.**
 
 Single-page marketing site for a productized website service:
 
@@ -51,9 +53,8 @@ GitHub Pages (one account per client).
 
 Replace the placeholders:
 
-- `hello@webkarta.bg` → real email (appears in CTA, footer JSON-LD)
+- `hello@pagefive.bg` → real email (appears in CTA, footer JSON-LD)
 - `+359 888 000 000` → real phone (CTA, hero mockup, JSON-LD)
-- Brand name `УебКарта` → final name, if different
 - `vashiyat-biznes.bg` → example domain shown in the mockup (cosmetic)
 
 Prices, delivery time and package contents are set in the copy — adjust as needed.

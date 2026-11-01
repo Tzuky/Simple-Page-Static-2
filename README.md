@@ -15,10 +15,10 @@ under the client's own account. Delivery in **3–5 working days**.
 
 ## Live site
 
-https://tzuky.github.io/Simple-Page-Static-2/
+https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 
-> GitHub Pages must be enabled once: **Settings → Pages → Deploy from a branch →
-> `main` / `(root)`**.
+> The repo also works with GitHub Pages if you ever need a fallback:
+> **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
 
 ---
 
@@ -53,7 +53,7 @@ GitHub Pages (one account per client).
 
 Replace the placeholders:
 
-- `hello@pagefive.bg` → real email (appears in CTA, footer JSON-LD)
+- `hello@pagefive.net` → real email (appears in CTA, footer JSON-LD)
 - `+359 888 000 000` → real phone (CTA, hero mockup, JSON-LD)
 - `vashiyat-biznes.bg` → example domain shown in the mockup (cosmetic)
 

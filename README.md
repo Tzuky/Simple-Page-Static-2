@@ -9,6 +9,7 @@ Single-page marketing site for a productized website service:
 
 The offer: the client fills in a short questionnaire, sends text/photos, receives
 **5 design concepts**, picks one, and the site is published for free on GitHub Pages
+or Cloudflare Pages
 under the client's own account. Delivery in **3–5 working days**.
 
 ---
@@ -33,7 +34,7 @@ https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 No build step, no framework, no dependencies — deploy-ready as-is.
 
 Production client sites are planned as **HTML generated with Hugo**, hosted free on
-GitHub Pages (one account per client).
+GitHub Pages or Cloudflare Pages (one account per client).
 
 ---
 
@@ -44,8 +45,9 @@ GitHub Pages (one account per client).
 3. Process — 5 steps from questionnaire to publishing
 4. Questionnaire — sample of the strict intake questions
 5. Designs — 5 mini theme previews (classic, warm, minimal, corporate, bold)
-6. FAQ — timeline, ownership, fees, editing, domain
-7. Contact — email / phone / location + JSON-LD `ProfessionalService`
+6. Hosting — GitHub Pages vs Cloudflare Pages (both free)
+7. FAQ — timeline, ownership, fees, editing, domain
+8. Contact — email / phone / location + JSON-LD `ProfessionalService`
 
 ---
 

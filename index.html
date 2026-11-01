@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PageFive — бизнес сайт за малкия бизнес: 5 дизайна за избор, готов за 3–5 дни, безплатен хостинг в GitHub Pages. Нов сайт 200–250 €, модернизация 150–200 €.">
+    <meta name="description" content="PageFive — бизнес сайт за малкия бизнес: 5 дизайна за избор, готов за 3–5 дни, безплатен хостинг в GitHub Pages или Cloudflare Pages. Нов сайт 200–250 €, модернизация 150–200 €.">
     <title>PageFive | Бизнес сайт за малкия бизнес</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6a00'/%3E%3Ctext x='32' y='47' font-family='Arial,sans-serif' font-size='42' font-weight='bold' fill='white' text-anchor='middle'%3E5%3C/text%3E%3C/svg%3E">
     <meta property="og:type" content="website">
     <meta property="og:title" content="PageFive | Бизнес сайт за малкия бизнес">
-    <meta property="og:description" content="Пет дизайна. Един сайт. Бизнес сайт за 3–5 дни с безплатен хостинг в GitHub Pages.">
+    <meta property="og:description" content="Пет дизайна. Един сайт. Бизнес сайт за 3–5 дни с безплатен хостинг в GitHub Pages или Cloudflare Pages.">
     <meta property="og:url" content="https://pagefive.net/">
     <meta property="og:locale" content="bg_BG">
     <link rel="canonical" href="https://pagefive.net/">
@@ -767,6 +767,78 @@
         .theme-4 { --t-bg: #f2f6fa; --t-ink: #12344f; --t-muted: #d5e0ea; --t-accent: #1872c5; --t-accent2: #0b2438; }
         .theme-5 { --t-bg: #0b2438; --t-ink: #ffffff; --t-muted: #3a5a75; --t-accent: #fdc600; --t-accent2: #ff6a00; }
 
+        /* ---------- Hosting ---------- */
+        .hosting-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+        }
+        .host-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .host-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: #f3c6b6;
+        }
+        .host-top {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .host-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--orange-soft);
+            color: var(--orange);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+        .host-name {
+            font-family: var(--font-head);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+        }
+        .host-card p {
+            color: var(--muted);
+            font-size: 0.9375rem;
+            line-height: 1.65;
+        }
+        .host-list {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 1.1rem;
+        }
+        .host-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.55rem;
+            font-size: 0.875rem;
+            color: var(--ink);
+        }
+        .host-list svg {
+            color: var(--orange);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .host-note {
+            margin-top: 1.3rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
         /* ---------- FAQ ---------- */
         .faq {
             max-width: 820px;
@@ -944,6 +1016,7 @@
             .biz-card { position: relative; left: 0; bottom: 0; width: 100%; margin-top: 1rem; }
             .cta { padding: 2.75rem 1.25rem; }
             .contact-row { flex-direction: column; align-items: center; gap: 0.7rem; }
+            .hosting-grid { grid-template-columns: 1fr; }
             .q-cta { align-items: center; width: 100%; }
             .foot-grid { flex-direction: column; }
             .foot-meta { justify-content: center; text-align: center; }
@@ -1008,7 +1081,7 @@
                         </span>
                         <span>
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Собствен GitHub акаунт
+                            Собствен GitHub / Cloudflare акаунт
                         </span>
                         <span>
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1071,7 +1144,7 @@
                     <div class="stat-icon">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                     </div>
-                    <div><b>0 € / месец</b><span>хостинг в GitHub Pages</span></div>
+                    <div><b>0 € / месец</b><span>GitHub Pages или Cloudflare</span></div>
                 </div>
             </div>
         </div>
@@ -1099,7 +1172,7 @@
                             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Мобилна версия и бързо зареждане</li>
                             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Контакти, карта и работно време</li>
                             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Основни SEO настройки</li>
-                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Публикуване в GitHub Pages</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Публикуване в GitHub или Cloudflare Pages</li>
                             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 кръг корекции</li>
                         </ul>
                         <a href="#contact" class="btn btn-orange">Заявете нов сайт</a>
@@ -1125,11 +1198,53 @@
                 <p class="pkg-note">Цените са за една страница на български език. Допълнителни страници, втори език и собствен домейн — по договаряне.</p>
 
                 <div class="included reveal">
-                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Собствен GitHub акаунт</span>
+                    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Собствен GitHub / Cloudflare акаунт</span>
                     <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Безплатен хостинг</span>
                     <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Кодът остава ваш</span>
                     <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Кратко упътване за редакция</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- Hosting -->
+        <section id="hosting" class="section">
+            <div class="wrap">
+                <div class="sec-head center reveal">
+                    <span class="kicker">Хостинг</span>
+                    <h2>Два безплатни варианта.</h2>
+                    <p class="sec-desc">Избирате къде да живее сайтът. И двете опции са без месечна такса — ние настройваме всичко.</p>
+                </div>
+                <div class="hosting-grid">
+                    <article class="host-card reveal">
+                        <div class="host-top">
+                            <span class="host-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </span>
+                            <span class="host-name">GitHub Pages</span>
+                        </div>
+                        <p>Безплатен хостинг към вашия GitHub акаунт — кодът и сайтът са на едно място.</p>
+                        <ul class="host-list">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Пълен контрол върху кода</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Идеален за статични сайтове</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Собствен акаунт на ваше име</li>
+                        </ul>
+                    </article>
+                    <article class="host-card reveal">
+                        <div class="host-top">
+                            <span class="host-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.96A6 6 0 0 0 6.1 11.2 4 4 0 0 0 6.5 19h11z"></path></svg>
+                            </span>
+                            <span class="host-name">Cloudflare Pages</span>
+                        </div>
+                        <p>Безплатен хостинг и домейн на едно място — бърз CDN и автоматичен SSL.</p>
+                        <ul class="host-list">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Домейн и хостинг в един акаунт</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Бърз глобален CDN</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Автоматичен SSL сертификат</li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="host-note reveal">Ако домейнът е регистриран в Cloudflare, най-лесно е всичко да е на едно място. Ако предпочитате GitHub — също работи.</p>
             </div>
         </section>
 
@@ -1165,7 +1280,7 @@
                     <article class="step reveal">
                         <div class="step-num">05</div>
                         <h3>Публикуване</h3>
-                        <p>Качваме сайта в GitHub Pages и ви даваме достъп.</p>
+                        <p>Публикуваме в GitHub Pages или Cloudflare Pages и ви даваме достъп.</p>
                     </article>
                 </div>
             </div>
@@ -1265,11 +1380,11 @@
                     </details>
                     <details class="reveal">
                         <summary>Кой притежава сайта след като е готов?</summary>
-                        <p>Вие. Създаваме GitHub акаунт на ваше име и сайтът е изцяло ваш — код, съдържание и достъп. Не сме обвързани с абонаменти или заключване към нас.</p>
+                        <p>Вие. Създаваме акаунт в GitHub или Cloudflare на ваше име и сайтът е изцяло ваш — код, съдържание и достъп. Не сме обвързани с абонаменти или заключване към нас.</p>
                     </details>
                     <details class="reveal">
                         <summary>Има ли месечни такси?</summary>
-                        <p>Не. GitHub Pages е безплатен за статични сайтове. Плащате само еднократната изработка. Собствен домейн (например .bg) е по желание и се заплаща отделно на регистратора.</p>
+                        <p>Не. GitHub Pages и Cloudflare Pages са безплатни за статични сайтове. Плащате само еднократната изработка. Собствен домейн (например .bg) е по желание и се заплаща отделно на регистратора.</p>
                     </details>
                     <details class="reveal">
                         <summary>Мога ли да редактирам сайта сам?</summary>
@@ -1336,7 +1451,7 @@
             </div>
             <div class="foot-meta">
                 <span>&copy; <span id="year"></span> PageFive. Всички права запазени.</span>
-                <span>HTML + Hugo · GitHub Pages</span>
+                <span>HTML + Hugo · GitHub / Cloudflare Pages</span>
             </div>
         </div>
     </footer>
@@ -1369,7 +1484,7 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "PageFive",
-        "description": "Изработка на бизнес сайтове за малкия бизнес — 5 дизайна за избор, готови за 3–5 дни, безплатен хостинг в GitHub Pages.",
+        "description": "Изработка на бизнес сайтове за малкия бизнес — 5 дизайна за избор, готови за 3–5 дни, безплатен хостинг в GitHub Pages или Cloudflare Pages.",
         "areaServed": "BG",
         "priceRange": "€150–€250",
         "address": {

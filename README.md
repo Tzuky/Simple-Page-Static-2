@@ -27,7 +27,14 @@ https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 
 ```
 .
-├── index.html   # the entire site (HTML + CSS + a little vanilla JS)
+├── index.html            # the entire site (HTML + CSS + a little vanilla JS)
+├── robots.txt            # crawler rules
+├── sitemap.xml           # single-URL sitemap
+├── assets/
+│   ├── favicon.svg
+│   ├── apple-touch-icon.png
+│   ├── og-image.png      # 1200×630 social preview
+│   └── pagefive-vaprosnik.docx
 └── README.md
 ```
 

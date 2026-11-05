@@ -27,10 +27,12 @@ https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 
 ```
 .
-├── index.html            # the entire site (HTML + CSS + a little vanilla JS)
+├── index.html            # the entire site (HTML + CSS, plus JSON-LD)
+├── _headers              # Cloudflare Pages security headers
 ├── robots.txt            # crawler rules
 ├── sitemap.xml           # single-URL sitemap
 ├── assets/
+│   ├── app.js            # small vanilla JS (year, nav shadow, scroll reveal)
 │   ├── favicon.svg
 │   ├── apple-touch-icon.png
 │   ├── og-image.png      # 1200×630 social preview
@@ -78,3 +80,9 @@ Prices, delivery time and package contents are set in the copy — adjust as nee
 - Light theme, responsive down to small phones
 - `prefers-reduced-motion` respected
 - FAQ uses native `<details>` — no JS needed
+- Security headers in `_headers` (applied by Cloudflare Pages): HSTS,
+  `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`,
+  `Permissions-Policy`, `Cross-Origin-Opener-Policy`, and a CSP currently in
+  **report-only** mode. To enforce it, rename the header to `Content-Security-Policy`
+  after confirming no violations. If you enable Cloudflare Web Analytics or Email
+  Address Obfuscation, update `script-src`/`connect-src` accordingly.

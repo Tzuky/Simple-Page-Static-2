@@ -33,6 +33,8 @@ https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 ├── sitemap.xml           # single-URL sitemap
 ├── assets/
 │   ├── app.js            # small vanilla JS (year, nav shadow, scroll reveal)
+│   ├── fonts.css         # self-hosted @font-face rules
+│   ├── fonts/            # Raleway and Open Sans WOFF2 files
 │   ├── favicon.svg
 │   ├── apple-touch-icon.png
 │   ├── og-image.png      # 1200×630 social preview
@@ -80,6 +82,7 @@ Prices, delivery time and package contents are set in the copy — adjust as nee
 - Light theme, responsive down to small phones
 - `prefers-reduced-motion` respected
 - FAQ uses native `<details>` — no JS needed
+- Fonts are self-hosted and preloaded, so there is no fallback-font flash on load.
 - Security headers in `_headers` (applied by Cloudflare Pages): HSTS,
   `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`,
   `Permissions-Policy`, `Cross-Origin-Opener-Policy`, and a CSP currently in

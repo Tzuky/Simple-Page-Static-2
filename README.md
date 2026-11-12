@@ -58,7 +58,7 @@ GitHub Pages or Cloudflare Pages (one account per client).
 5. Designs — 5 mini theme previews (classic, warm, minimal, corporate, bold)
 6. Hosting — GitHub Pages vs Cloudflare Pages (both free)
 7. FAQ — timeline, ownership, fees, editing, domain
-8. Contact — email / phone / location + JSON-LD `ProfessionalService`
+8. Contact — email / location + JSON-LD `ProfessionalService`
 
 ---
 

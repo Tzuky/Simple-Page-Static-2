@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7f9">
+    <title>Политика за поверителност | PageFive</title>
+    <meta name="description" content="Как PageFive обработва личните данни от контактната форма — какво събираме, защо, колко време пазим и какви са вашите права.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="canonical" href="https://pagefive.net/privacy/">
+    <link rel="preload" href="../assets/fonts/opensans-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/opensans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/raleway-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/fonts.css">
+    <style>
+        :root {
+            --navy: #0b2438;
+            --ink: #16202b;
+            --muted: #5b6b7b;
+            --line: #e3e8ee;
+            --bg: #f5f7f9;
+            --white: #ffffff;
+            --orange: #ff6a00;
+            --orange-2: #ff8a37;
+            --font-head: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: #d95700; }
+
+        .wrap { width: min(860px, calc(100% - 40px)); margin-inline: auto; }
+
+        .site-head { padding: 28px 0 0; }
+        .head-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 11px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--orange), var(--orange-2));
+            color: #fff;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 16px rgba(255, 106, 0, 0.25);
+        }
+        .brand-name {
+            display: block;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: var(--navy);
+            line-height: 1.15;
+        }
+        .brand-sub {
+            display: block;
+            color: var(--muted);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+        .back-link {
+            color: var(--navy);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .back-link:hover { color: var(--orange); }
+
+        .policy {
+            margin: 34px 0 50px;
+            padding: 48px 56px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(11, 36, 56, 0.07);
+        }
+        .kicker {
+            color: var(--orange);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-family: var(--font-head);
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 28px; }
+        .policy p { margin-bottom: 16px; }
+        .policy h2 {
+            font-family: var(--font-head);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin: 30px 0 10px;
+            line-height: 1.3;
+        }
+        .policy ul { margin: 0 0 16px 1.2rem; }
+        .policy li { margin-bottom: 6px; }
+        .policy strong { color: var(--navy); }
+        .note {
+            margin-top: 30px;
+            padding: 16px 20px;
+            border-left: 3px solid var(--orange);
+            border-radius: 0 10px 10px 0;
+            background: #fff3e8;
+            color: #6b4a33;
+            font-size: 0.92rem;
+        }
+
+        footer {
+            padding: 0 0 40px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        footer a { color: var(--navy); }
+
+        @media (max-width: 640px) {
+            .policy { padding: 30px 22px; margin-top: 24px; }
+            .brand-sub { display: none; }
+            .head-inner { align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-head">
+        <div class="wrap head-inner">
+            <a class="brand" href="/" aria-label="PageFive — начало">
+                <span class="brand-mark" aria-hidden="true">5</span>
+                <span>
+                    <span class="brand-name">PageFive</span>
+                    <span class="brand-sub">Пет дизайна · един сайт</span>
+                </span>
+            </a>
+            <a class="back-link" href="/">← Обратно към сайта</a>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <article class="policy">
+            <div class="kicker">Правна информация</div>
+            <h1>Политика за поверителност</h1>
+            <p class="updated">Последна актуализация: 12 ноември 2026 г.</p>
+
+            <p>Тази политика обяснява как PageFive („ние“, „нас“) обработва личните данни, които ни предоставяте чрез контактната форма на pagefive.net.</p>
+
+            <h2>1. Кой е администраторът на лични данни?</h2>
+            <p>PageFive — онлайн услуга за изработка на бизнес сайтове. Можете да се свържете с нас на <a href="mailto:hello@pagefive.net">hello@pagefive.net</a>.</p>
+
+            <h2>2. Какви данни събираме?</h2>
+            <p>Само данните, които въведете в контактната форма:</p>
+            <ul>
+                <li>име;</li>
+                <li>телефонен номер;</li>
+                <li>имейл адрес (по избор);</li>
+                <li>съобщение/описание на запитването;</li>
+                <li>дата и час на изпращане (технически данни, генерирани от услугата).</li>
+            </ul>
+            <p>Не събираме данни за карти, ЕГН, адрес или други чувствителни данни. Не използваме аналитични или рекламни инструменти и не създаваме профили на посетителите.</p>
+
+            <h2>3. Защо използваме данните?</h2>
+            <p>Използваме ги единствено, за да:</p>
+            <ul>
+                <li>отговорим на запитването ви;</li>
+                <li>обсъдим проекта и ви изпратим оферта;</li>
+                <li>се свържем с вас по телефона, ако сте поискали обратно обаждане.</li>
+            </ul>
+            <p>Правното основание е вашето съгласие, изразено с отметката във формата, и/или предприемане на стъпки по ваше искане преди сключване на договор.</p>
+
+            <h2>4. Колко дълго пазим данните?</h2>
+            <p>Не съхраняваме данните в база данни. Съобщението пристига като имейл. Използваме телефона само за обратно обаждане, ако сте го поискали, и изтриваме имейла и данните от пощата след приключване на запитването/разговора, освен ако законът не изисква да ги пазим за по-дълъг срок (например при сключен договор и счетоводни документи).</p>
+
+            <h2>5. Кой има достъп до данните?</h2>
+            <p>Данните се обработват от:</p>
+            <ul>
+                <li><strong>Web3Forms</strong> — услуга за обработка и доставяне на контактната форма по имейл. <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Политика за поверителност на Web3Forms</a>.</li>
+                <li><strong>Cloudflare</strong> — хостинг на сайта. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Политика за поверителност на Cloudflare</a>.</li>
+                <li><strong>Доставчикът на електронна поща</strong>, който получава съобщението.</li>
+            </ul>
+            <p>Не продаваме и не предоставяме данните на трети страни за маркетингови цели.</p>
+
+            <h2>6. Бисквитки</h2>
+            <p>Сайтът не използва аналитични или рекламни бисквитки. Възможно е Cloudflare, като хостинг доставчик, да използва технически бисквитки за сигурност и защита от злоупотреба.</p>
+
+            <h2>7. Вашите права</h2>
+            <p>Съгласно GDPR имате право на:</p>
+            <ul>
+                <li>достъп до данните си;</li>
+                <li>коригиране на неточни данни;</li>
+                <li>изтриване („правото да бъдеш забравен“);</li>
+                <li>ограничаване на обработването;</li>
+                <li>възражение срещу обработването;</li>
+                <li>преносимост на данните;</li>
+                <li>оттегляне на съгласието по всяко време.</li>
+            </ul>
+            <p>За да упражните правата си, пишете на <a href="mailto:hello@pagefive.net">hello@pagefive.net</a>. Ще отговорим в срок до един месец.</p>
+            <p>Имате право да подадете жалба до Комисията за защита на личните данни (КЗЛД): гр. София 1592, бул. „Проф. Цветан Лазаров“ № 2, <a href="https://www.cpdp.bg" target="_blank" rel="noopener">www.cpdp.bg</a>.</p>
+
+            <h2>8. Промени в политиката</h2>
+            <p>Можем да актуализираме тази политика. Актуалната версия е винаги публикувана на тази страница.</p>
+
+            <h2>9. Контакт</h2>
+            <p>За въпроси относно личните данни: <a href="mailto:hello@pagefive.net">hello@pagefive.net</a>.</p>
+
+            <p class="note">Ако не желаете данните ви да бъдат обработвани за обратно обаждане, просто не изпращайте формата. Можете да ни пишете и по имейл.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2026 PageFive. Всички права запазени. · <a href="/">Начало</a> · <a href="/#contact">Контакти</a></p>
+        </div>
+    </footer>
+</body>
+</html>

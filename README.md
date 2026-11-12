@@ -28,6 +28,7 @@ https://pagefive.net/ — deployed on Cloudflare Pages from this repository.
 ```
 .
 ├── index.html            # the entire site (HTML + CSS, plus JSON-LD)
+├── privacy/index.html    # privacy policy page
 ├── _headers              # Cloudflare Pages security headers
 ├── robots.txt            # crawler rules
 ├── sitemap.xml           # single-URL sitemap
@@ -83,6 +84,7 @@ Prices, delivery time and package contents are set in the copy — adjust as nee
 - `prefers-reduced-motion` respected
 - FAQ uses native `<details>` — no JS needed
 - Fonts are self-hosted and preloaded, so there is no fallback-font flash on load.
+- Contact form uses Web3Forms; the privacy policy is at `/privacy/`.
 - Security headers in `_headers` (applied by Cloudflare Pages): HSTS,
   `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`,
   `Permissions-Policy`, `Cross-Origin-Opener-Policy`, and a CSP currently in

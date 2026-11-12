@@ -925,6 +925,81 @@
         }
         .contact-row a:hover { text-decoration: underline; }
 
+        .contact-form-wrap {
+            max-width: 720px;
+            margin: 2rem auto 0;
+            padding: 2rem;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: left;
+        }
+        .contact-form-head { text-align: center; margin-bottom: 1.6rem; }
+        .contact-form-head h3 {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+        }
+        .contact-form-head p { color: var(--muted); font-size: 0.9375rem; }
+        .contact-form { display: grid; gap: 1rem; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-field {
+            display: grid;
+            gap: 0.35rem;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .form-field small { font-weight: 400; color: var(--muted); }
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            font: inherit;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            color: var(--ink);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 0.8rem 0.95rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.12);
+        }
+        .form-field textarea { resize: vertical; min-height: 120px; }
+        .form-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.8125rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .form-consent input { margin-top: 0.2rem; accent-color: var(--orange); }
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem 1.2rem;
+            margin-top: 0.3rem;
+        }
+        .form-note { font-size: 0.75rem; color: var(--muted); max-width: 320px; }
+        .form-status { min-height: 1.2rem; font-size: 0.875rem; margin-top: 0.2rem; }
+        .form-status.success { color: #1a7f4b; }
+        .form-status.error { color: #b42318; }
+        .form-honeypot { display: none; }
+        @media (max-width: 640px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .contact-form-wrap { padding: 1.5rem; }
+        }
+
         /* ---------- Footer ---------- */
         footer {
             background: var(--navy);
@@ -1398,6 +1473,46 @@
                         <a href="mailto:hello@pagefive.net">hello@pagefive.net</a>
                         <span style="color: rgba(255,255,255,.85);">Варна · дистанционно за цяла България</span>
                     </div>
+                </div>
+
+                <div class="contact-form-wrap reveal">
+                    <div class="contact-form-head">
+                        <h3>Оставете телефон за връзка</h3>
+                        <p>Ще се свържем с вас, за да обсъдим проекта. Без ангажимент.</p>
+                    </div>
+                    <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="d37e4169-919a-47c9-b51e-48b235795aa7">
+                        <input type="hidden" name="subject" value="Ново запитване от pagefive.net">
+                        <input type="hidden" name="from_name" value="PageFive">
+                        <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+                        <div class="form-grid">
+                            <label class="form-field">
+                                <span>Вашето име</span>
+                                <input type="text" name="name" autocomplete="name" required placeholder="Име и фамилия">
+                            </label>
+                            <label class="form-field">
+                                <span>Телефон</span>
+                                <input type="tel" name="phone" autocomplete="tel" required placeholder="Телефон за връзка">
+                            </label>
+                        </div>
+                        <label class="form-field">
+                            <span>Имейл <small>(по избор)</small></span>
+                            <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+                        </label>
+                        <label class="form-field">
+                            <span>Съобщение</span>
+                            <textarea name="message" rows="4" required placeholder="Разкажете накратко за бизнеса и какъв сайт ви трябва..."></textarea>
+                        </label>
+                        <label class="form-consent">
+                            <input type="checkbox" name="consent" required>
+                            <span>Съгласен/на съм PageFive да се свърже с мен по телефона или имейла, който съм посочил/а.</span>
+                        </label>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-orange">Изпрати запитване</button>
+                            <span class="form-note">Ще използваме телефона само за връзка по това запитване.</span>
+                        </div>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    </form>
                 </div>
             </div>
         </section>

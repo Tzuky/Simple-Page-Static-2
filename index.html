@@ -1478,8 +1478,8 @@
 
                 <div class="contact-form-wrap reveal">
                     <div class="contact-form-head">
-                        <h3>Оставете телефон за връзка</h3>
-                        <p>Ще се свържем с вас, за да обсъдим проекта. Без ангажимент.</p>
+                        <h3>Оставете имейл за връзка</h3>
+                        <p>Ще се свържем с вас по имейл, за да обсъдим проекта. Без ангажимент.</p>
                     </div>
                     <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="d37e4169-919a-47c9-b51e-48b235795aa7">
@@ -1492,13 +1492,13 @@
                                 <input type="text" name="name" autocomplete="name" required placeholder="Име и фамилия">
                             </label>
                             <label class="form-field">
-                                <span>Телефон</span>
-                                <input type="tel" name="phone" autocomplete="tel" required placeholder="Телефон за връзка">
+                                <span>Телефон <small>(по избор)</small></span>
+                                <input type="tel" name="phone" autocomplete="tel" placeholder="Телефон за връзка">
                             </label>
                         </div>
                         <label class="form-field">
-                            <span>Имейл <small>(по избор)</small></span>
-                            <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+                            <span>Имейл</span>
+                            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
                         </label>
                         <label class="form-field">
                             <span>Съобщение</span>
@@ -1506,11 +1506,11 @@
                         </label>
                         <label class="form-consent">
                             <input type="checkbox" name="consent" required>
-                            <span>Съгласен/на съм PageFive да се свърже с мен по телефона или имейла, който съм посочил/а. Вижте <a href="/privacy/" target="_blank" rel="noopener">Политиката за поверителност</a>.</span>
+                            <span>Съгласен/на съм PageFive да се свърже с мен по имейла, който съм посочил/а, или по телефона, ако съм го посочил/а. Вижте <a href="/privacy/" target="_blank" rel="noopener">Политиката за поверителност</a>.</span>
                         </label>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-orange">Изпрати запитване</button>
-                            <span class="form-note">Ще използваме телефона само за връзка по това запитване.</span>
+                            <span class="form-note">Телефонът е по избор и се използва само за връзка по това запитване.</span>
                         </div>
                         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                     </form>
